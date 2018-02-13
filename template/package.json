@@ -13,9 +13,9 @@
     "axios": "^0.16.x",
     "fs-router": "^0.4.0",
     "micro": "^9.0.0",
-    "micro-body": "^0.1.1",
+    "micro-body": "^0.1.x",
     "nuxt": "^1.0.0",
-    "vuetify": "^0.17.4"
+    "vuetify": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
