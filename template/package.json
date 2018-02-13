@@ -5,12 +5,15 @@
   "author": "{{ author }}",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "micro-dev server -w server",
     "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate"
+    "start": "micro server"
   },
   "dependencies": {
+    "axios": "^0.16.x",
+    "fs-router": "^0.4.0",
+    "micro": "^9.0.0",
+    "micro-body": "^0.1.1",
     "nuxt": "^1.0.0",
     "vuetify": "^0.17.4"
   },
@@ -27,6 +30,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "micro-dev": "^2.2.0",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1"
   }
