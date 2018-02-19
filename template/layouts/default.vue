@@ -50,7 +50,7 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
+    <v-footer :inset="inset" app>
       <span>&copy; 2017</span>
     </v-footer>
   </v-app>
@@ -62,7 +62,7 @@
       return {
         clipped: false,
         drawer: true,
-        fixed: false,
+        inset: false,
         items: [
           { icon: 'apps', title: 'Welcome', to: '/' },
           { icon: 'bubble_chart', title: 'Inspire', to: '/inspire' }
@@ -70,7 +70,7 @@
         miniVariant: false,
         right: true,
         rightDrawer: false,
-        title: 'Vuetify.js'
+        title: '{{name}}'
       }
     }
   }
