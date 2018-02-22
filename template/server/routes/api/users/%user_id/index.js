@@ -2,7 +2,7 @@ const { createError } = require('micro')
 const parse = require('micro-body')
 const {_users} = require('..')
 
-function findUser (req) {
+exports.GET = (req) => {
   let id = parseInt(typeof req === 'number' ? req : req.params.user_id)
   if (isNaN(id)) throw createError(400, 'Invalid type for user id')
   let user = _users.find(element => element.id === id)
@@ -10,12 +10,10 @@ function findUser (req) {
   return user
 }
 
-exports.GET = async (req) => findUser(req)
-
 exports.PUT = async (req) => {
   let {name} = await parse(req)
   if (!name) throw createError(400, 'name not present')
-  return Object.assign(findUser(req), {name})
+  return Object.assign(exports.GET(req), {name})
 }
 
 exports.DELETE = async (req) => {
